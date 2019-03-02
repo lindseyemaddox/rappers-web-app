@@ -3,32 +3,53 @@
 $pink = #ff00ec
 $blue = #526fee
 $purple = #7b56d7
-$black = #000000
+$dark = #000000
+$white = #ffffff
 
 $sans = 'Raleway'
 $performance-font = 'Arial', sans-serif
 $primary-font-size = 16px
 $primary-line-height = 1.5em
+$layout-max-width = 1000px
 
 $thin = 100         // Raleway — Thin - used on main title
 $light = 300        // Raleway — Light - used on bio text
 $medium = 500       // Raleway — Medium - used on name title
 $black = 900        // Raleway — Black - used on BIO button
 
+html
+  font-size: $primary-font-size
+
 primary-type(w)
   font-family: $sans, $performance-font
   font-weight: w
   line-height: $primary-line-height
 
-@keyframes next
+@keyframes move
   0%
-    opacity: 100%
-    top: 25px
+    top: 20%
   100%
-    opacity: 0
-    top: 0
+    top: 90%
 
-html
-  font-size: $primary-font-size
+.animate-color
+  align-items: top
+  animation: animateBG 20s ease infinite
+  background-image: linear-gradient(
+    -45deg,
+    rgba(59, 173, 227, 1) 0,
+    rgba(87, 111, 230, 1) 25%,
+    rgba(152, 68, 183, 1) 51%,
+    rgba(255, 53, 127, 1) 100%
+  )
+  background-size: 300% 300%
+  display: flex
+  height: auto
+  width: 100%
 
-$layout-max-width = 1000px
+@keyframes animateBG
+  0%
+    background-position: 0% 50%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0% 50%
