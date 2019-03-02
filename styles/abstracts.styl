@@ -1,0 +1,39 @@
+
+
+$pink = #ff00ec
+$blue = #526fee
+$purple = #7b56d7
+$black = #000000
+
+$sans = 'Raleway'
+$performance-font = 'Arial', sans-serif
+$primary-font-size = 16px
+$primary-line-height = 1.5em
+
+$thin = 100         // Raleway — Thin
+$extra-light = 200  // Raleway — Extra-Light
+$light = 300        // Raleway — Light - used on bio text
+$regular = 400      // Raleway — Regular
+$medium = 500       // Raleway — Medium - used on name title
+$semi-bold = 600    // Raleway — Semi-Bold
+$bold = 700         // Raleway — Bold
+$extra-bold = 800   // Raleway — Extra-Bold
+$black = 900        // Raleway — Black - used on BIO button
+
+primary-type(w)
+  font-family: $sans, $performance-font
+  font-weight: w
+  line-height: $primary-line-height
+
+@keyframes next
+  0%
+    opacity: 100%
+    top: 25px
+  100%
+    opacity: 0
+    top: 0
+
+html
+  font-size: $primary-font-size
+
+$layout-max-width = 1000px
