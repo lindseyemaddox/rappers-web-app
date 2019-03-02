@@ -1,0 +1,79 @@
+
+.grid
+  height: 100vh
+  margin: 0 5vw
+  max-width: $layout-max-width
+  width: 90vw
+
+h1
+  color: $white
+  font-size: 4em
+  letter-spacing: .25em
+  padding: 7vh 0 9vh
+  primary-type($thin)
+  text-align: center
+  text-transform: uppercase
+
+  &:before
+    content: '(((((('
+    font-size: 1.4em
+    vertical-align: bottom
+
+  &:after
+    content: '))))))'
+    font-size: 1.4em
+    vertical-align: bottom
+
+.wrapper
+  text-align: center
+
+.artist
+  display: inline-block
+  width: 15vw
+  height: 15vw
+  margin: 0 1vw 0
+  max-width: 250px
+  position: relative
+  vertical-align: top
+
+  // &.selected
+  //   flex: 20px 0 0
+
+  img
+    filter: contrast(200%) grayscale(100%)
+    width: 100%
+    transition: all 400ms ease
+
+  h2
+    color: $white
+    font-size: 1.875em
+    letter-spacing: 2px
+    opacity: 0
+    padding-top: 0
+    position: absolute
+    primary-type($medium)
+    line-height: 0.9em
+    text-align: left
+    text-transform: uppercase
+    transition: all 300ms ease
+
+  p
+    color: $white
+    font-size: 1em
+    letter-spacing: -1px
+    opacity: 0
+    transition: all 400ms ease
+
+  &:hover
+
+    img
+      filter: none
+
+    h2
+      animation: move 400ms cubic-bezier(.9,.03,.69,.22)
+      opacity: 1
+      padding-top: 7px
+
+    // p
+    //   color: $dark
+    //   opacity: 1
