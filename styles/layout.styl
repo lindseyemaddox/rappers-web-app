@@ -38,63 +38,6 @@ h1
   position: relative
   vertical-align: top
 
-  &:hover
-
-    img
-      filter: none
-      opacity: 1
-
-    h2
-      animation: move 400ms cubic-bezier(.9,.03,.69,.22)
-      opacity: 1
-      padding-top: 7px
-
-  &.selected
-
-    .icon-bio
-      color: $white
-      top: 100%
-
-    .bio
-      display: block
-      margin-top: 100px
-      opacity: 1
-
-  &.selected,
-  &:hover
-    h2
-      animation: move 400ms cubic-bezier(.9,.03,.69,.22)
-      opacity: 1
-      padding-top: 7px
-
-  @media screen and (min-width: 1600px)
-    width: 250px
-    height: 250px
-
-
-
-
-  .icon-bio
-    color: $pink
-    font-size: 2em
-    left: 10px
-    opacity: 1
-    position: absolute
-    top: 10px
-    transition: all 400ms ease
-
-    @media screen and (max-width: 1200px)
-      left: 5px
-      top: 3px
-
-    &:after
-      content: 'BIO'
-      font-size: .5em
-      margin: 0 0 0 -5px
-      primary-type($black)
-      vertical-align: bottom
-
-
   img
     filter: contrast(200%) grayscale(100%)
     opacity: 0.85
@@ -105,8 +48,6 @@ h1
     color: $white
     font-size: 2em
     letter-spacing: 2px
-    opacity: 0
-    padding-top: 0
     position: absolute
     primary-type($medium)
     line-height: 0.9em
@@ -114,13 +55,61 @@ h1
     text-transform: uppercase
     transition: all 400ms ease
 
-    @media screen and (max-width: 1200px)
-      font-size: 1.75em
-
   .bio
     color: $white
     display: none
-    font-size: 1em
+    font-size: 1.25em
     letter-spacing: -1px
     opacity: 0
+    primary-type($light)
+    text-align: left
     transition: all 400ms ease
+
+  .icon-bio
+    color: $pink
+    font-size: 2em
+    left: 10px
+    opacity: 1
+    position: absolute
+    bottom: 10px
+    transition: bottom 400ms ease
+
+    &:after
+      content: 'BIO'
+      font-size: .5em
+      margin: 0 0 0 -5px
+      primary-type($black)
+      vertical-align: bottom
+
+
+
+
+  &.selected
+
+    .icon-bio
+      // animation: move 400ms cubic-bezier(.9,.03,.69,.22)
+      color: $white
+      // top: 100%
+
+    .bio
+      display: block
+      margin-top: 100px
+      opacity: 1
+
+
+
+  &.selected,
+  &:hover
+
+    img
+      filter: none
+      opacity: 1
+
+    h2
+      opacity: 1
+
+
+
+  @media screen and (min-width: 1600px)
+    width: 250px
+    height: 250px
