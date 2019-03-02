@@ -1,8 +1,7 @@
 
 .grid
   height: 100vh
-  margin: 0 5vw
-  max-width: $layout-max-width
+  margin: 0 auto
   width: 90vw
 
 h1
@@ -28,6 +27,7 @@ h1
   text-align: center
 
 .artist
+  background-color: $purple
   display: inline-block
   width: 15vw
   height: 15vw
@@ -36,17 +36,25 @@ h1
   position: relative
   vertical-align: top
 
+  &:nth-child(2n)
+    background-color: $pink
+
+  @media screen and (min-width: 1600px)
+    width: 250px
+    height: 250px
+
   // &.selected
   //   flex: 20px 0 0
 
   img
     filter: contrast(200%) grayscale(100%)
-    width: 100%
+    opacity: 0.7
     transition: all 400ms ease
+    width: 100%
 
   h2
     color: $white
-    font-size: 1.875em
+    font-size: 2em
     letter-spacing: 2px
     opacity: 0
     padding-top: 0
@@ -68,6 +76,7 @@ h1
 
     img
       filter: none
+      opacity: 1
 
     h2
       animation: move 400ms cubic-bezier(.9,.03,.69,.22)

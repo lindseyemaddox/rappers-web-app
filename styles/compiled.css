@@ -204,6 +204,7 @@ html {
   display: -webkit-flex;
   display: flex;
   height: auto;
+  overflow: hidden;
   width: 100%;
 }
 @-webkit-keyframes move {
@@ -271,8 +272,7 @@ html {
 }
 .grid {
   height: 100vh;
-  margin: 0 5vw;
-  max-width: 1000px;
+  margin: 0 auto;
   width: 90vw;
 }
 h1 {
@@ -300,6 +300,7 @@ h1:after {
   text-align: center;
 }
 .artist {
+  background-color: #7b56d7;
   display: inline-block;
   width: 15vw;
   height: 15vw;
@@ -308,16 +309,26 @@ h1:after {
   position: relative;
   vertical-align: top;
 }
+.artist:nth-child(2n) {
+  background-color: #ff00ec;
+}
+@media screen and (min-width: 1600px) {
+  .artist {
+    width: 250px;
+    height: 250px;
+  }
+}
 .artist img {
   -webkit-filter: contrast(200%) grayscale(100%);
           filter: contrast(200%) grayscale(100%);
-  width: 100%;
+  opacity: 0.7;
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
+  width: 100%;
 }
 .artist h2 {
   color: #fff;
-  font-size: 1.875em;
+  font-size: 2em;
   letter-spacing: 2px;
   opacity: 0;
   padding-top: 0;
@@ -342,6 +353,7 @@ h1:after {
 .artist:hover img {
   -webkit-filter: none;
           filter: none;
+  opacity: 1;
 }
 .artist:hover h2 {
   -webkit-animation: move 400ms cubic-bezier(0.9, 0.03, 0.69, 0.22);
