@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".artist").each(function(e,t){$(t).on("click",function(){$(".bio").hide(),$(".bio*[data-name="+$(this).data("name")+"]").show(),$(".artist").removeClass("selected"),$(this).addClass("selected")})})});
+$(document).ready(function(){$(".artist").each(function(e,t){$(t).on("click",function(){$(".artist").removeClass("selected"),$(this).addClass("selected")})})});
