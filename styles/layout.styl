@@ -1,15 +1,14 @@
 
 .grid
   height: 100vh
-  margin: 0 5vw
-  max-width: $layout-max-width
+  margin: 0 auto
   width: 90vw
 
 h1
   color: $white
   font-size: 4em
   letter-spacing: .25em
-  padding: 7vh 0 9vh
+  padding: 5vh 0
   primary-type($thin)
   text-align: center
   text-transform: uppercase
@@ -27,53 +26,95 @@ h1
 .wrapper
   text-align: center
 
+.bio p
+  color: $white
+  font-size: 1.25em
+  letter-spacing: -1px
+  primary-type($light)
+  text-align: left
+  transition: all 400ms ease
+
 .artist
-  display: inline-block
-  width: 15vw
-  height: 15vw
+  background-color: $blue
+  display: block
+  width: 15vh
+  height: 15vh
   margin: 0 1vw 0
-  max-width: 250px
   position: relative
   vertical-align: top
 
-  // &.selected
-  //   flex: 20px 0 0
-
   img
-    filter: contrast(200%) grayscale(100%)
-    width: 100%
+    filter: saturate(8)
+    left: 0
+    max-width: 250px
+    opacity: 1
+    position: absolute
     transition: all 400ms ease
+    width: 100%
+    z-index: 1
 
   h2
+    bottom: 10px
     color: $white
-    font-size: 1.875em
+    font-size: 3em
     letter-spacing: 2px
     opacity: 0
-    padding-top: 0
     position: absolute
     primary-type($medium)
-    line-height: 0.9em
+    left: 0
+    line-height: 0.8em
     text-align: left
     text-transform: uppercase
-    transition: all 300ms ease
+    transition: all 400ms ease 400ms
+    white-space: nowrap
+    z-index: 0
 
-  p
-    color: $white
-    font-size: 1em
-    letter-spacing: -1px
+  .icon-bio
+    background-color: rgba($blue, .3)
+    color: $pink
+    cursor: pointer
+    font-size: 2em
+    right: 0
     opacity: 0
-    transition: all 400ms ease
+    padding: 8px 8px 12px
+    position: absolute
+    bottom: 0
+    transition: all 400ms ease 300ms
+    z-index: 2
 
+    &:after
+      content: 'BIO'
+      font-size: .5em
+      margin: 0 0 0 -5px
+      primary-type($black)
+      vertical-align: bottom
+
+  &.selected
+
+    .bio
+      display: block
+      margin-top: 10px
+      opacity: 1
+
+  &.selected,
   &:hover
+
+    .icon-bio
+      // animation: move 500ms cubic-bezier(.9,.03,.69,.22)
+      background-color: rgba($blue, 1)
+      color: $white
+      opacity: 1
+      z-index: 999999
 
     img
       filter: none
+      opacity: 1
+      z-index: 99999
 
     h2
-      animation: move 400ms cubic-bezier(.9,.03,.69,.22)
+      left: 103%
       opacity: 1
-      padding-top: 7px
 
-    // p
-    //   color: $dark
-    //   opacity: 1
+  @media screen and (min-width: 1600px)
+    // width: 250px
+    // height: 250px

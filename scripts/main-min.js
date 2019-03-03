@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".artist").each(function(e,t){$(t).on("click",function(){$(".artist").removeClass("selected"),$(this).addClass("selected")})})});
