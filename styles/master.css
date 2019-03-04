@@ -344,20 +344,6 @@ h1:after {
   text-align: left;
   transition: all 400ms ease;
 }
-h3 {
-  color: #fff;
-  font-size: 2em;
-  letter-spacing: 2px;
-  padding-bottom: 20px;
-  font-family: 'Raleway', 'Arial', sans-serif;
-  font-weight: 500;
-  line-height: 1.5em;
-  line-height: 0.8em;
-  text-align: left;
-  text-transform: uppercase;
-  transition: all 400ms ease 400ms;
-  white-space: nowrap;
-}
 .artist {
   background-color: #526fee;
   display: block;
@@ -417,8 +403,10 @@ h3 {
   line-height: 1.5em;
   vertical-align: bottom;
 }
-.artist.selected {
-  top: 0;
+.artist.selected .bio {
+  display: block;
+  margin-top: 10px;
+  opacity: 1;
 }
 .artist.selected .icon-bio,
 .artist:hover .icon-bio {
@@ -443,8 +431,13 @@ h3 {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
 }
 .modal:target {
+  display: block;
   z-index: 9999;
 }
 .bio {
@@ -453,12 +446,12 @@ h3 {
   background-color: rgba(123,86,215,0.6);
   border: 1px solid #fff;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  left: 25vw;
-  max-width: 580px;
+  margin: auto;
+  max-width: 400px;
   padding: 60px;
   position: relative;
   outline: 0;
-  top: 18vh;
+  top: 20vh;
   width: auto;
 }
 .icon-close {

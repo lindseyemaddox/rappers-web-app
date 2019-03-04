@@ -34,6 +34,18 @@ h1
   text-align: left
   transition: all 400ms ease
 
+h3
+  color: $white
+  font-size: 2em
+  letter-spacing: 2px
+  padding-bottom: 20px
+  primary-type($medium)
+  line-height: 0.8em
+  text-align: left
+  text-transform: uppercase
+  transition: all 400ms ease 400ms
+  white-space: nowrap
+
 .artist
   background-color: $blue
   display: block
@@ -90,11 +102,12 @@ h1
       vertical-align: bottom
 
   &.selected
+    top: 0
 
-    .bio
-      display: block
-      margin-top: 10px
-      opacity: 1
+    // + .modal
+    //   display: block
+    //   margin-top: 10px
+    //   opacity: 1
 
   &.selected,
   &:hover
