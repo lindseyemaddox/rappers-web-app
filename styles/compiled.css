@@ -197,8 +197,9 @@ html {
   background-image: linear-gradient(-45deg, #3bade3 0, #576fe6 25%, #9844b7 51%, #ff357f 100%);
   background-size: 300% 300%;
   display: flex;
-  height: auto;
+  height: 100vh;
   overflow: hidden;
+  position: fixed;
   width: 100%;
 }
 @-moz-keyframes move {
@@ -315,6 +316,7 @@ h1 {
   font-size: 4em;
   letter-spacing: 0.25em;
   padding: 5vh 0;
+  position: relative;
   font-family: 'Raleway', 'Arial', sans-serif;
   font-weight: 100;
   line-height: 1.5em;
@@ -331,10 +333,27 @@ h1:after {
   font-size: 1.4em;
   vertical-align: bottom;
 }
-.wrapper {
+#artists {
+  position: relative;
   text-align: center;
 }
-.bio p {
+.wrapper {
+  margin: 0 auto;
+  width: 15vh;
+}
+.modal {
+  bottom: 0;
+  left: 16vh;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all 400ms ease 200ms;
+  vertical-align: bottom;
+  width: 40vw;
+}
+.modal p {
   color: #fff;
   font-size: 1.25em;
   letter-spacing: -1px;
@@ -342,7 +361,7 @@ h1:after {
   font-weight: 300;
   line-height: 1.5em;
   text-align: left;
-  transition: all 400ms ease;
+  transition: all 400ms ease 100ms;
 }
 h3 {
   color: #fff;
@@ -361,18 +380,15 @@ h3 {
 .artist {
   background-color: #526fee;
   display: block;
-  width: 15vh;
+  cursor: pointer;
   height: 15vh;
-  margin: 0 1vw 0;
   position: relative;
-  vertical-align: top;
+  width: 15vh;
 }
 .artist img {
-  filter: saturate(8);
-  left: 0;
+  filter: grayscale(100%);
   max-width: 250px;
   opacity: 1;
-  position: absolute;
   transition: all 400ms ease;
   width: 100%;
   z-index: 1;
@@ -387,11 +403,11 @@ h3 {
   font-family: 'Raleway', 'Arial', sans-serif;
   font-weight: 500;
   line-height: 1.5em;
-  left: 0;
+  right: 0;
   line-height: 0.8em;
   text-align: left;
   text-transform: uppercase;
-  transition: all 400ms ease 400ms;
+  transition: all 400ms ease 200ms;
   white-space: nowrap;
   z-index: 0;
 }
@@ -406,7 +422,6 @@ h3 {
   position: absolute;
   bottom: 0;
   transition: all 400ms ease 300ms;
-  z-index: 2;
 }
 .artist .icon-bio:after {
   content: 'BIO';
@@ -417,15 +432,15 @@ h3 {
   line-height: 1.5em;
   vertical-align: bottom;
 }
-.artist.selected {
-  top: 0;
+.artist.selected .modal {
+  left: 16vh;
+  opacity: 1;
 }
 .artist.selected .icon-bio,
 .artist:hover .icon-bio {
   background-color: #526fee;
   color: #fff;
   opacity: 1;
-  z-index: 999999;
 }
 .artist.selected img,
 .artist:hover img {
@@ -435,76 +450,6 @@ h3 {
 }
 .artist.selected h2,
 .artist:hover h2 {
-  left: 103%;
+  right: 16vh;
   opacity: 1;
-}
-.modal {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.modal:target {
-  z-index: 9999;
-}
-.bio {
-  animation-name: example;
-  animation-duration: 500ms;
-  background-color: rgba(123,86,215,0.6);
-  border: 1px solid #fff;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  left: 25vw;
-  max-width: 580px;
-  padding: 60px;
-  position: relative;
-  outline: 0;
-  top: 18vh;
-  width: auto;
-}
-.icon-close {
-  color: rgba(255,255,255,0.7);
-  font-size: 20px;
-  position: absolute;
-  right: 20px;
-  text-decoration: none;
-  top: 20px;
-  transition: color 400ms ease;
-  z-index: 99999;
-}
-.icon-close:hover {
-  color: #ff00ec;
-  text-decoration: none;
-  cursor: pointer;
-}
-@-moz-keyframes example {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes example {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes example {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes example {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
