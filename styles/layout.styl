@@ -34,6 +34,13 @@ h1
   @media screen and (max-width: 600px)
     font-size: 2em
 
+  @media screen and (max-width: 500px)
+    &:before, &:after
+      content: ''
+
+  @media screen and (max-height: 900px)
+    padding: 7vh 0 5vh
+
 #artists
   position: relative
   text-align: center
@@ -159,7 +166,7 @@ h3
       left: 16vh
       opacity: 1
 
-      @media screen and (max-width: 600px)
+      @media screen and (max-width: 800px)
         left: 105%
         width: 100%
 
@@ -171,6 +178,9 @@ h3
       color: $white
       opacity: 1
 
+      @media screen and (max-width: 700px)
+        opacity: 0
+
     img
       filter: none
       opacity: 1
@@ -180,5 +190,5 @@ h3
       right: 16vh
       opacity: 1
 
-      @media screen and (max-width: 600px)
+      @media screen and (max-width: 800px)
         right: 105%
