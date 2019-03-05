@@ -17,13 +17,17 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,300,500,900">
     <link rel="stylesheet" type="text/css" href="styles/compiled.css">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
   </head>
   <body>
     <div class="animate-color"></div>
     <div class="grid">
       <section>
+        <div class="search">
+          <div class="ui-widget">
+            <label for="tags">Search: </label>
+            <input id="tags">
+          </div>
+        </div>
         <h1>Artists</h1>
         <div id="artists">
           <div class="wrapper"><a class="artist" data-name="kanye" href="#kanye">
@@ -66,5 +70,23 @@
       </section>
     </div>
   </body>
-  <footer></footer>
+  <footer>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script>
+      $( function() {
+        var availableTags = [
+          "Kanye West",
+          "Drake",
+          "Kendrick Lamar",
+          "Future",
+          "J. Cole"
+        ];
+        $( "#tags" ).autocomplete({
+          source: availableTags
+        });
+      } );
+    </script>
+  </footer>
 </html>

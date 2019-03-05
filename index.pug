@@ -22,10 +22,6 @@ html
       link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,300,500,900")
       link(rel="stylesheet" type="text/css" href="styles/compiled.css")
 
-    block scripts
-      script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
-      script(type="text/javascript" src="scripts/main.js")
-
   body
 
     .animate-color
@@ -34,9 +30,31 @@ html
         
       section
                     
+        .search
+          .ui-widget
+            label(for="tags") Search: 
+            input#tags
+          
         h1 Artists
         
         include views/artists
 
   footer
     
+    block scripts
+      script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+      script(type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+      script(type="text/javascript" src="scripts/main.js")
+      script.
+        $( function() {
+          var availableTags = [
+            "Kanye West",
+            "Drake",
+            "Kendrick Lamar",
+            "Future",
+            "J. Cole"
+          ];
+          $( "#tags" ).autocomplete({
+            source: availableTags
+          });
+        } );
