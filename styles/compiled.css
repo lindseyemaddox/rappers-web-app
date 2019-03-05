@@ -192,33 +192,23 @@ html {
   font-size: 16px;
 }
 .animate-color {
-  align-items: top;
-  animation: animateBG 20s ease infinite;
+  -webkit-box-align: top;
+  -webkit-align-items: top;
+          align-items: top;
+  -webkit-animation: animateBG 20s ease infinite;
+          animation: animateBG 20s ease infinite;
+  background-image: -webkit-linear-gradient(135deg, #3bade3 0, #576fe6 25%, #9844b7 51%, #ff357f 100%);
   background-image: linear-gradient(-45deg, #3bade3 0, #576fe6 25%, #9844b7 51%, #ff357f 100%);
   background-size: 300% 300%;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   height: 100vh;
   overflow: hidden;
   position: fixed;
   width: 100%;
 }
-@-moz-keyframes move {
-  0% {
-    top: 20%;
-  }
-  100% {
-    top: 90%;
-  }
-}
 @-webkit-keyframes move {
-  0% {
-    top: 20%;
-  }
-  100% {
-    top: 90%;
-  }
-}
-@-o-keyframes move {
   0% {
     top: 20%;
   }
@@ -234,29 +224,7 @@ html {
     top: 90%;
   }
 }
-@-moz-keyframes animateBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 @-webkit-keyframes animateBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@-o-keyframes animateBG {
   0% {
     background-position: 0% 50%;
   }
@@ -312,7 +280,7 @@ body {
 .grid {
   height: 100vh;
   margin: 0 auto;
-  width: 90vw;
+  width: 100vw;
 }
 h1 {
   color: #fff;
@@ -336,6 +304,28 @@ h1:after {
   font-size: 1.4em;
   vertical-align: bottom;
 }
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 3em;
+    padding-top: 70px;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1:before,
+  h1:after {
+    content: '';
+  }
+}
+@media screen and (max-height: 900px) {
+  h1 {
+    padding: 7vh 0 5vh;
+  }
+}
 #artists {
   position: relative;
   text-align: center;
@@ -343,6 +333,11 @@ h1:after {
 .wrapper {
   margin: 0 auto;
   width: 15vh;
+}
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 25vw;
+  }
 }
 .modal {
   bottom: 0;
@@ -352,9 +347,15 @@ h1:after {
   opacity: 0;
   position: absolute;
   top: 0;
+  -webkit-transition: all 400ms ease 200ms;
   transition: all 400ms ease 200ms;
   vertical-align: bottom;
-  width: 40vw;
+  width: 38vw;
+}
+@media screen and (max-width: 700px) {
+  .modal {
+    width: 33vw;
+  }
 }
 .modal p {
   color: #fff;
@@ -364,7 +365,19 @@ h1:after {
   font-weight: 300;
   line-height: 1.5em;
   text-align: left;
+  -webkit-transition: all 400ms ease 100ms;
   transition: all 400ms ease 100ms;
+}
+@media screen and (max-width: 1100px) {
+  .modal p {
+    font-size: 1em;
+    letter-spacing: 0.1px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .modal p {
+    line-height: 1.25em;
+  }
 }
 h3 {
   color: #fff;
@@ -377,6 +390,7 @@ h3 {
   line-height: 0.8em;
   text-align: left;
   text-transform: uppercase;
+  -webkit-transition: all 400ms ease 400ms;
   transition: all 400ms ease 400ms;
   white-space: nowrap;
 }
@@ -388,10 +402,18 @@ h3 {
   position: relative;
   width: 15vh;
 }
+@media screen and (max-width: 600px) {
+  .artist {
+    height: auto;
+    width: auto;
+  }
+}
 .artist img {
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   max-width: 250px;
-  opacity: 1;
+  opacity: 0.4;
+  -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
   width: 100%;
   z-index: 1;
@@ -410,9 +432,27 @@ h3 {
   line-height: 0.8em;
   text-align: left;
   text-transform: uppercase;
+  -webkit-transition: all 400ms ease 200ms;
   transition: all 400ms ease 200ms;
   white-space: nowrap;
   z-index: 0;
+}
+@media screen and (max-width: 1100px) {
+  .artist h2 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 900px) {
+  .artist h2 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 700px) {
+  .artist h2 {
+    font-size: 1.25em;
+    text-align: right;
+    white-space: normal;
+  }
 }
 .artist .icon-bio {
   background-color: rgba(82,111,238,0.3);
@@ -424,6 +464,7 @@ h3 {
   padding: 8px 8px 12px;
   position: absolute;
   bottom: 0;
+  -webkit-transition: all 400ms ease 300ms;
   transition: all 400ms ease 300ms;
 }
 .artist .icon-bio:after {
@@ -439,15 +480,28 @@ h3 {
   left: 16vh;
   opacity: 1;
 }
+@media screen and (max-width: 800px) {
+  .artist.selected .modal {
+    left: 105%;
+    width: 100%;
+  }
+}
 .artist.selected .icon-bio,
 .artist:hover .icon-bio {
   background-color: #526fee;
   color: #fff;
   opacity: 1;
 }
+@media screen and (max-width: 700px) {
+  .artist.selected .icon-bio,
+  .artist:hover .icon-bio {
+    opacity: 0;
+  }
+}
 .artist.selected img,
 .artist:hover img {
-  filter: none;
+  -webkit-filter: none;
+          filter: none;
   opacity: 1;
   z-index: 99999;
 }
@@ -455,6 +509,12 @@ h3 {
 .artist:hover h2 {
   right: 16vh;
   opacity: 1;
+}
+@media screen and (max-width: 800px) {
+  .artist.selected h2,
+  .artist:hover h2 {
+    right: 105%;
+  }
 }
 .search {
   background-color: #000;
