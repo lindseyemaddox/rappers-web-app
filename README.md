@@ -5,10 +5,17 @@
 Aloompa Coding Challenge: Rappers Web App
 Due back March 6, 2019
 
+
 ## Favicon Package
 
 Favicon package was generated with [RealFaviconGenerator](https://realfavicongenerator.net/) [v0.16](https://realfavicongenerator.net/change_log#v0.16)
 
+
 ## Icon Package
 
 Icons were generated with [IcoMoon](https://icomoon.io/app/)
+
+
+## Search Widget
+
+Search widget built with JQuery UI [JQuery UI Autocomplete](http://jqueryui.com/autocomplete/)

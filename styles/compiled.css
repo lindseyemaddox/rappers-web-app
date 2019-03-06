@@ -314,50 +314,6 @@ body {
   margin: 0 auto;
   width: 100vw;
 }
-h1 {
-  color: #fff;
-  font-size: 4em;
-  letter-spacing: 0.25em;
-  padding: 5vh 0;
-  position: relative;
-  font-family: 'Raleway', 'Arial', sans-serif;
-  font-weight: 100;
-  line-height: 1.5em;
-  text-align: center;
-  text-transform: uppercase;
-}
-h1:before {
-  content: '((((((';
-  font-size: 1.4em;
-  vertical-align: bottom;
-}
-h1:after {
-  content: '))))))';
-  font-size: 1.4em;
-  vertical-align: bottom;
-}
-@media screen and (max-width: 900px) {
-  h1 {
-    font-size: 3em;
-    padding-top: 70px;
-  }
-}
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 2em;
-  }
-}
-@media screen and (max-width: 500px) {
-  h1:before,
-  h1:after {
-    content: '';
-  }
-}
-@media screen and (max-height: 900px) {
-  h1 {
-    padding: 70px 0 5vh;
-  }
-}
 #artists {
   position: relative;
   text-align: center;
@@ -392,41 +348,6 @@ h1:after {
 .modal h3 {
   display: none;
 }
-.modal p {
-  color: #fff;
-  font-size: 1.25em;
-  letter-spacing: -1px;
-  font-family: 'Raleway', 'Arial', sans-serif;
-  font-weight: 300;
-  line-height: 1.5em;
-  text-align: left;
-  transition: all 400ms ease 100ms;
-}
-@media screen and (max-width: 1100px) {
-  .modal p {
-    font-size: 1em;
-    letter-spacing: 0.1px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .modal p {
-    line-height: 1.25em;
-  }
-}
-h3 {
-  color: #fff;
-  font-size: 2em;
-  letter-spacing: 2px;
-  padding-bottom: 20px;
-  font-family: 'Raleway', 'Arial', sans-serif;
-  font-weight: 500;
-  line-height: 1.5em;
-  line-height: 0.8em;
-  text-align: left;
-  text-transform: uppercase;
-  transition: all 400ms ease 400ms;
-  white-space: nowrap;
-}
 .artist {
   background-color: #526fee;
   display: block;
@@ -449,41 +370,6 @@ h3 {
   transition: all 400ms ease;
   width: 100%;
   z-index: 1;
-}
-.artist h2 {
-  bottom: 10px;
-  color: #fff;
-  font-size: 3em;
-  letter-spacing: 2px;
-  opacity: 0;
-  position: absolute;
-  font-family: 'Raleway', 'Arial', sans-serif;
-  font-weight: 500;
-  line-height: 1.5em;
-  right: 0;
-  line-height: 0.8em;
-  text-align: left;
-  text-transform: uppercase;
-  transition: all 400ms ease 200ms;
-  white-space: nowrap;
-  z-index: 0;
-}
-@media screen and (max-width: 1100px) {
-  .artist h2 {
-    font-size: 2em;
-  }
-}
-@media screen and (max-width: 900px) {
-  .artist h2 {
-    font-size: 1.5em;
-  }
-}
-@media screen and (max-width: 700px) {
-  .artist h2 {
-    font-size: 1.25em;
-    text-align: right;
-    white-space: normal;
-  }
 }
 .artist .icon-bio {
   background-color: rgba(82,111,238,0.3);
@@ -566,6 +452,120 @@ h3 {
     left: inherit;
     right: -90%;
     width: 80%;
+  }
+}
+h1 {
+  color: #fff;
+  font-size: 4em;
+  letter-spacing: 0.25em;
+  padding: 5vh 0;
+  position: relative;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 100;
+  line-height: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+h1:before {
+  content: '((((((';
+  font-size: 1.4em;
+  vertical-align: bottom;
+}
+h1:after {
+  content: '))))))';
+  font-size: 1.4em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 3em;
+    padding-top: 70px;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1:before,
+  h1:after {
+    content: '';
+  }
+}
+@media screen and (max-height: 900px) {
+  h1 {
+    padding: 70px 0 5vh;
+  }
+}
+.modal p {
+  color: #fff;
+  font-size: 1.25em;
+  letter-spacing: -1px;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  text-align: left;
+  transition: all 400ms ease 100ms;
+}
+@media screen and (max-width: 1100px) {
+  .modal p {
+    font-size: 1em;
+    letter-spacing: 0.1px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .modal p {
+    line-height: 1.25em;
+  }
+}
+h3 {
+  color: #fff;
+  font-size: 2em;
+  letter-spacing: 2px;
+  padding-bottom: 20px;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 500;
+  line-height: 1.5em;
+  line-height: 0.8em;
+  text-align: left;
+  text-transform: uppercase;
+  transition: all 400ms ease 400ms;
+  white-space: nowrap;
+}
+h2 {
+  bottom: 10px;
+  color: #fff;
+  font-size: 3em;
+  letter-spacing: 2px;
+  opacity: 0;
+  position: absolute;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 500;
+  line-height: 1.5em;
+  right: 0;
+  line-height: 0.8em;
+  text-align: left;
+  text-transform: uppercase;
+  transition: all 400ms ease 200ms;
+  white-space: nowrap;
+  z-index: 0;
+}
+@media screen and (max-width: 1100px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 900px) {
+  h2 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 700px) {
+  h2 {
+    font-size: 1.25em;
+    text-align: right;
+    white-space: normal;
   }
 }
 .search {
