@@ -1,5 +1,4 @@
 
-
 $(document).ready(function() {
 
   // Find all links within the artists container
@@ -18,7 +17,7 @@ $(document).ready(function() {
       $( ".artist" ).removeClass( "selected" );
 
       // Add class to the clicked link
-      $(this).toggleClass( "selected" );
+      $(this).addClass( "selected" );
 
     });
 
