@@ -24,5 +24,6 @@ $(document).ready(function() {
 
   });
 
+  const artists = require('./views/response.json');
 
 });
