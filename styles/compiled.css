@@ -323,7 +323,7 @@ h1:after {
 }
 @media screen and (max-height: 900px) {
   h1 {
-    padding: 7vh 0 5vh;
+    padding: 70px 0 5vh;
   }
 }
 #artists {
@@ -336,7 +336,8 @@ h1:after {
 }
 @media screen and (max-width: 600px) {
   .wrapper {
-    width: 25vw;
+    margin: 0;
+    width: 50vw;
   }
 }
 .modal {
@@ -356,6 +357,9 @@ h1:after {
   .modal {
     width: 33vw;
   }
+}
+.modal h3 {
+  display: none;
 }
 .modal p {
   color: #fff;
@@ -405,6 +409,7 @@ h3 {
 @media screen and (max-width: 600px) {
   .artist {
     height: auto;
+    max-width: 250px;
     width: auto;
   }
 }
@@ -486,6 +491,11 @@ h3 {
     width: 100%;
   }
 }
+@media screen and (max-width: 600px) {
+  .artist.selected .modal {
+    padding-top: 70px;
+  }
+}
 .artist.selected .icon-bio,
 .artist:hover .icon-bio {
   background-color: #526fee;
@@ -516,6 +526,24 @@ h3 {
     right: 105%;
   }
 }
+@media screen and (max-width: 600px) {
+  .artist.selected h2,
+  .artist:hover h2 {
+    display: none;
+  }
+  .artist.selected h3,
+  .artist:hover h3 {
+    display: block;
+    font-size: 1.5em;
+    white-space: normal;
+  }
+  .artist.selected .modal,
+  .artist:hover .modal {
+    left: inherit;
+    right: -90%;
+    width: 80%;
+  }
+}
 .search {
   background-color: #000;
   border-bottom-right-radius: 3px;
@@ -525,6 +553,14 @@ h3 {
   top: 0;
   width: 244px;
   z-index: 1;
+}
+@media screen and (max-width: 600px) {
+  .search {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 0;
+    left: inherit;
+    right: 0;
+  }
 }
 .ui-widget {
   color: #fff;
@@ -536,6 +572,13 @@ h3 {
   top: 10px;
   width: 100%;
   z-index: 1;
+}
+@media screen and (max-width: 600px) {
+  .ui-widget {
+    right: 10px;
+    text-align: right;
+    width: 97%;
+  }
 }
 .ui-widget #tags {
   width: 150px;

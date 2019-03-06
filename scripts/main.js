@@ -18,7 +18,7 @@ $(document).ready(function() {
       $( ".artist" ).removeClass( "selected" );
 
       // Add class to the clicked link
-      $(this).addClass( "selected" );
+      $(this).toggleClass( "selected" );
 
     });
 
